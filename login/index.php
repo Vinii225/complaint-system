@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <section class="login-page">
   <h2>Login</h2>
   <?php
-  include $_SERVER['DOCUMENT_ROOT'] . '/includes/forms/auth/login.php';
+  include $_SERVER['DOCUMENT_ROOT'] . '/includes/auth_login.php';
   ?>
 </section>
 

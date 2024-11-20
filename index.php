@@ -8,7 +8,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
   <div class="container">
     <h1>Ouvidoria Online</h1>
     <?php
-    include $_SERVER['DOCUMENT_ROOT'] . '/includes/forms/post/create.php';
+    include $_SERVER['DOCUMENT_ROOT'] . '/includes/post_create.php';
     ?>
     <div>
 </section>
@@ -16,9 +16,9 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
 <?php
 if (isset($_GET['id'])) {
   $post_id = (int)$_GET['id']; // Sanitizar o id da URL
-  include $_SERVER['DOCUMENT_ROOT'] . '/includes/post.php';
+  include $_SERVER['DOCUMENT_ROOT'] . '/includes/post_read.php';
 } else {
-  include $_SERVER['DOCUMENT_ROOT'] . '/includes/posts.php';
+  include $_SERVER['DOCUMENT_ROOT'] . '/includes/posts_read.php';
 }
 ?>
 
