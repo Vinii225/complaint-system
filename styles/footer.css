@@ -4,6 +4,7 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 50px;
   padding: 30px 50px;
+  height: 200px;
 }
 
 .page-links,

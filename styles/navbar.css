@@ -1,7 +1,25 @@
 .navbar-container {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  height: 60px;
+  border: 1px solid red;
+}
+
+.navbar {
+  display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
+
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+  }
 }
 
 .navbar-container a {

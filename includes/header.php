@@ -3,6 +3,7 @@ if (!defined('ALLOW_INCLUDE')) {
   die('Direct access not allowed!');
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,17 +26,38 @@ if (!defined('ALLOW_INCLUDE')) {
   $links = [
     "Home" => "/",
     "Forum" => "/forum",
-    "Login" => "/login",
-    "Register" => "/register",
     "About" => "/about",
   ];
+  $unloggedAuthLinks = [
+    "Login" => "/login",
+    "Register" => "/register",
+  ];
+  $loggedAuthLinks = [
+    "Profile" => "/profile",
+    "Logout" => "/logout",
+  ];
   ?>
-  <header>
-    <nav>
-      <ul>
+  <header class="navbar-container">
+    <img src="oi" alt="Ouvidoria Logo">
+    <nav class="navbar">
+      <ul class="nav-links">
         <?php
         foreach ($links as $title => $link) {
           echo "<a href='$link'><li>$title</a></a>";
+        }
+        ?>
+      </ul>
+      <ul class="auth-links">
+        <?php
+        $session_started = session_status();
+        if ($session_started) {
+          foreach ($loggedAuthLinks as $title => $link) {
+            echo "<a href='$link'><li>$title</a></a>";
+          }
+        } else {
+          foreach ($unloggedAuthLinks as $title => $link) {
+            echo "<a href='$link'><li>$title</a></a>";
+          }
         }
         ?>
       </ul>
