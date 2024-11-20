@@ -13,7 +13,6 @@ if (isset($postId)) {
     $post = $result->fetch_assoc();
   } else {
     echo "Post não encontrado!";
-    exit;
   }
 } else {
   echo "ID não fornecido!";

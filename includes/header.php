@@ -20,13 +20,13 @@ if (!defined('ALLOW_INCLUDE')) {
   <link rel="stylesheet" href="styles/navbar.css">
   <link rel="stylesheet" href="styles/footer.css">
   <link rel="stylesheet" href="styles/forms.css">
+  <link rel="stylesheet" href="styles/about.css">
 </head>
 
 <body>
   <?php
   $links = [
     "Home" => "/",
-    "Forum" => "/forum",
     "About" => "/about",
   ];
   $unloggedAuthLinks = [
@@ -50,16 +50,16 @@ if (!defined('ALLOW_INCLUDE')) {
       </ul>
       <ul class="auth-links">
         <?php
-        $session_status = session_status();
-        if ($session_status) {
-          foreach ($loggedAuthLinks as $title => $link) {
-            echo "<a href='$link'><li>$title</a></a>";
-          }
-        } else {
-          foreach ($unloggedAuthLinks as $title => $link) {
-            echo "<a href='$link'><li>$title</a></a>";
-          }
+        // $session_status = session_status();
+        // if ($session_status) {
+        foreach ($loggedAuthLinks as $title => $link) {
+          echo "<a href='$link'><li>$title</a></a>";
         }
+        // } else {
+        foreach ($unloggedAuthLinks as $title => $link) {
+          echo "<a href='$link'><li>$title</a></a>";
+        }
+        // }
         ?>
       </ul>
     </nav>

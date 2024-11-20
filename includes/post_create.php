@@ -6,8 +6,6 @@ if (!defined('ALLOW_INCLUDE')) {
 ?>
 <?php
 // Iniciar a sessão e incluir o arquivo de conexão com o banco
-session_start();
-include 'db.php'; // Caminho correto para o seu db.php
 
 // Verificar se o formulário foi enviado
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {

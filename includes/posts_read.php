@@ -2,9 +2,6 @@
 if (!defined('ALLOW_INCLUDE')) {
   die('Direct access not allowed!');
 }
-
-include 'db.php'; // Make sure you have the correct path to your db.php file
-
 ?>
 
 <section class="posts">
@@ -14,6 +11,7 @@ include 'db.php'; // Make sure you have the correct path to your db.php file
 
   // Query to get all posts
   $sql = "SELECT * FROM posts ORDER BY created_at DESC LIMIT 20";
+  include 'db.php'; // Make sure you have the correct path to your db.php file
   $result = $conn->query($sql);
 
   if ($result->num_rows > 0) {

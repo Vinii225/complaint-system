@@ -8,6 +8,10 @@
   min-width: 500px;
   background-color: #eee;
 
+  h1 {
+    margin: 20px 0 30px;
+  }
+
   input {
     display: inline-block;
     width: 100%;
