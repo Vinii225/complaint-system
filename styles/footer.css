@@ -1,0 +1,22 @@
+.footer-section {
+  border: 1px solid blue;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  padding: 30px 50px;
+}
+
+.page-links,
+.social-media {
+  border: 1px solid red;
+
+  h3 {
+    text-align: center;
+  }
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
