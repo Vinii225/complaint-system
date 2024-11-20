@@ -5,7 +5,7 @@ if (!defined('ALLOW_INCLUDE')) {
 $serverName = "localhost";
 $username = "root";
 $password = "";
-$dbName = "complaint-forum";
+$dbName = "complaint_forum";
 
 $conn = new mysqli($serverName, $username, $password, $dbName);
 
