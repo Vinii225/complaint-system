@@ -29,9 +29,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 ?>
 
 <section class="register-page">
-  <h2>Register</h2>
   <?php
-  include $_SERVER['DOCUMENT_ROOT'] . '/includes/auth_register.php';
+  include $_SERVER['DOCUMENT_ROOT'] . '/includes/auth_register_form.php';
   ?>
 </section>
 

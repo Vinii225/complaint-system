@@ -1,0 +1,43 @@
+.form {
+  margin: 40px auto;
+  padding: 20px 40px;
+  border-radius: 25px;
+  max-height: max-content;
+  max-width: max-content;
+  min-height: 300px;
+  min-width: 500px;
+  background-color: #eee;
+
+  input {
+    display: inline-block;
+    width: 100%;
+    min-height: 3em;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    border: none;
+    margin: 10px auto;
+  }
+
+  button {
+    background-color: greenyellow;
+    height: 4em;
+    width: max-content;
+    margin: 5px 0 5px auto;
+    border: none;
+    padding: 10px 50px;
+    font-weight: 600;
+    display: block;
+    letter-spacing: 1px;
+    border-radius: 10px;
+    transition: 300ms;
+  }
+  button:hover {
+    padding: 10px 80px;
+  }
+
+  p {
+    margin: 20px 0 0;
+    font-size: 12px;
+  }
+}

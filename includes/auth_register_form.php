@@ -4,7 +4,8 @@ if (!defined('ALLOW_INCLUDE')) {
 }
 ?>
 
-<form method="POST">
+<form method="POST" class="form register-form">
+  <h1>Register</h1>
   <input type="text" name="name" placeholder="Nome Completo" required><br>
   <input type="email" name="email" placeholder="Email" required><br>
   <input type="password" name="password" placeholder="Password" required><br>

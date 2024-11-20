@@ -4,7 +4,8 @@
   align-items: center;
   flex-direction: row;
   height: 60px;
-  border: 1px solid red;
+  background-color: #fff;
+  padding: 0 30px;
 }
 
 .navbar {
@@ -19,6 +20,10 @@
     align-items: center;
     flex-direction: row;
     gap: 20px;
+  }
+
+  a {
+    color: black;
   }
 }
 

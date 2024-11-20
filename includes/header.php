@@ -19,6 +19,7 @@ if (!defined('ALLOW_INCLUDE')) {
   <link rel="stylesheet" href="styles/index.css">
   <link rel="stylesheet" href="styles/navbar.css">
   <link rel="stylesheet" href="styles/footer.css">
+  <link rel="stylesheet" href="styles/forms.css">
 </head>
 
 <body>
@@ -49,8 +50,8 @@ if (!defined('ALLOW_INCLUDE')) {
       </ul>
       <ul class="auth-links">
         <?php
-        $session_started = session_status();
-        if ($session_started) {
+        $session_status = session_status();
+        if ($session_status) {
           foreach ($loggedAuthLinks as $title => $link) {
             echo "<a href='$link'><li>$title</a></a>";
           }
