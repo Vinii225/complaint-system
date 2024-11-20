@@ -1,4 +1,7 @@
 <?php
+if (!defined('ALLOW_INCLUDE')) {
+  die('Direct access not allowed!');
+}
 $serverName = "localhost";
 $username = "root";
 $password = "";
