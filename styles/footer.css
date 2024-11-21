@@ -27,9 +27,30 @@
 }
 
 .page-links {
+  position: relative;
   ul {
     grid-template-columns: repeat(1, 1fr);
   }
+}
+
+.page-links::before,
+.page-links::after {
+  content: "";
+  position: absolute;
+  background-color: white;
+}
+.page-links::before {
+  top: 0;
+  right: -23px;
+  height: 100%;
+  width: 3px;
+}
+.page-links::after {
+  transform: translateY(-50%);
+  top: 50%;
+  right: -31px;
+  height: 3px;
+  width: 20px;
 }
 
 .social-media {

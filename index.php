@@ -14,7 +14,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
   }
   ?>
 
-  <h1>Posts</h1>
+  <h1 class="posts-title">Posts</h1>
   <section class=posts-container>
     <?php
     $postTest = "
