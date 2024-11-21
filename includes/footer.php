@@ -11,8 +11,10 @@ $footerLinks = [
 $socialMediaLinks = [
   "Jezreel" => "https://github.com/woragis",
   "Vini" => "https://github.com/Vinii225",
-  "Carlos" => "https://github.com/",
-  "Roberio" => "https://github.com/",
+  "Carlos" => "https://github.com/carlos_humberto",
+  "Roberio" => "https://github.com/roberinho",
+  "Daniel" => "https://github.com/daniel_onix_fala_merda",
+  "Arthur" => "https://github.com/arthur",
 ];
 ?>
 <footer class="footer-section">

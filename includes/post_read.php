@@ -20,9 +20,11 @@ if (isset($postId)) {
 
 ?>
 <h1><?php echo htmlspecialchars($post['title']); ?></h1>
-<p><strong>Conteúdo:</strong></p>
-<p><?php echo nl2br(htmlspecialchars($post['content'])); ?></p>
+<p><strong>Mensagem:</strong></p>
+<p><?php echo nl2br(htmlspecialchars($post['body'])); ?></p>
 <p><strong>Data de Criação:</strong> <?php echo $post['created_at']; ?></p>
+<p><strong>Data de Edicao:</strong> <?php echo $post['updated_at']; ?></p>
 
 <!-- Link para voltar à lista de posts -->
+<button>Editar Post</button>
 <p><a href="/">Voltar à lista de posts</a></p>

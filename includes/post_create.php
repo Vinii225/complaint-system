@@ -11,10 +11,10 @@ if (!defined('ALLOW_INCLUDE')) {
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   // Sanitizar e pegar os dados do formulário
   $title = htmlspecialchars(trim($_POST['title']));
-  $content = htmlspecialchars(trim($_POST['content']));
+  $body = htmlspecialchars(trim($_POST['body']));
 
   // Verificar se os campos não estão vazios
-  if (!empty($title) && !empty($content)) {
+  if (!empty($title) && !empty($body)) {
     // Preparar a query para inserir o post no banco de dados
     $sql = "INSERT INTO posts (title, content) VALUES ('$title', '$content')";
 

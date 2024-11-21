@@ -18,12 +18,11 @@ if (!defined('ALLOW_INCLUDE')) {
     // Output data for each post
     echo "<ul>";
     while ($row = $result->fetch_assoc()) {
-      echo "<li>";
+      echo "<a href=" . $row['id'] . "><li>";
       echo "<h2>" . htmlspecialchars($row['title']) . "</h2>"; // Escape HTML for safety
-      echo "<p>" . nl2br(htmlspecialchars($row['content'])) . "</p>"; // Display content with line breaks
       echo "<p><strong>Autor: " . $row['author'] . "</strong></p>";
       echo "<p><em>Postado em: " . $row['created_at'] . "</em></p>";
-      echo "</li>";
+      echo "</li></a>";
     }
     echo "</ul>";
   } else {

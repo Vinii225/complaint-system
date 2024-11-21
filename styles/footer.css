@@ -16,12 +16,25 @@
 .social-media {
   h3 {
     text-align: center;
+    margin: 10px auto 20px;
   }
 
   ul {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column;
+    display: grid;
+    justify-items: flex-start;
+    align-content: flex-start;
+  }
+}
+
+.page-links {
+  ul {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.social-media {
+  ul {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
   }
 }
