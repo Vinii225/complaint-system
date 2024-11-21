@@ -5,7 +5,6 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
 ?>
 
 <section class="home">
-  <h1>Ouvidoria Online</h1>
   <?php
   if (isset($_GET['id'])) {
     $post_id = (int)$_GET['id'];

@@ -32,11 +32,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   }
 }
 ?>
-<form method="POST">
-  <input type="text" id="nome" name="nome" placeholder="Nome Completo" required />
-  <input type="text" id="email" name="email" placeholder="Email" required />
-  <label for="mensagem">Mensagem:</label>
-  <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
-
-  <input type="submit" value="Enviar" />
+<form method="POST" class="form post-form">
+  <h1>Criar Post</h1>
+  <input type="text" id="title" name="title" placeholder="Titulo" required />
+  <textarea id="body" name="body" placeholder="Mensagem" rows="5" required></textarea>
+  <button type="submit">Enviar Post</button>
 </form>

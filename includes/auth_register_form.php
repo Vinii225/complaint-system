@@ -6,12 +6,14 @@ if (!defined('ALLOW_INCLUDE')) {
 
 <form method="POST" class="form register-form">
   <h1>Register</h1>
-  <input type="text" name="name" placeholder="Nome Completo" required><br>
-  <input type="email" name="email" placeholder="Email" required><br>
-  <input type="password" name="password" placeholder="Password" required><br>
+  <input type="text" id="name" name="name" placeholder="Nome Completo" required>
+  <input type="email" id="email" name="email" placeholder="Email" required>
+  <input type="password" id="password" name="password" placeholder="Password" required>
   <button type="submit">Register</button>
-  <p class="authentication-toggler">
-    Already have an account?
-    <a href="/login">Login Here</a>
-  </p>
+  <div class="form-helper-buttons">
+    <p class="authentication-toggler">
+      Already have an account?
+      <a href="/login">Login Here</a>
+    </p>
+  </div>
 </form>

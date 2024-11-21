@@ -1,23 +1,27 @@
 .footer-section {
-  border: 1px solid blue;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 50px;
   padding: 30px 50px;
   height: 200px;
+  background-color: #333;
+  color: #fff;
+
+  a {
+    color: #eee;
+  }
 }
 
 .page-links,
 .social-media {
-  border: 1px solid red;
-
   h3 {
     text-align: center;
   }
+
   ul {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     flex-direction: column;
   }
 }
