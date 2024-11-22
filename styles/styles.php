@@ -23,6 +23,15 @@ body > section {
 h1 {
   color: #333;
 }
+
+.page-in-information-state {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
 .navbar-container {
   display: flex;
   justify-content: space-between;
@@ -311,4 +320,12 @@ h1 {
   align-items: center;
   flex-direction: column;
   gap: 50px;
+}
+.profile-page {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
 }

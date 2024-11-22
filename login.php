@@ -5,13 +5,12 @@ include './includes/header.php';
 ?>
 
 <?php
-include 'db.php';
-
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   $email = $_POST['email'];
   $password = $_POST['password'];
 
   $sql = "SELECT * FROM users WHERE email='$email'";
+  include 'db.php';
   $result = $conn->query($sql);
 
   if ($result->num_rows > 0) {
@@ -32,7 +31,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <section class="login-page">
   <?php
-  include './includes/auth_login_form.php';
+  include './includes/auth.php';
+  if (!$isLoggedIn) {
+    include './includes/auth_login_form.php';
+  } else {
+    echo "<section class=page-in-information-state>";
+    echo "<h1>You are already logged in</h1>";
+    echo "</section>";
+  }
   ?>
 </section>
 

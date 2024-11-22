@@ -7,11 +7,15 @@ include './includes/header.php';
 <section class="logout-page">
   <h1>Logging out</h1>
   <?php
-  if (isset($_SESSION['user_id']) && isset($_SESSION['user_name'])) {
+  include './includes/auth.php';
+  if ($isLoggedIn) {
     session_destroy();
     echo "<h2>Sessao destruida com sucesso</h2>";
   } else {
-    echo "<h2>Sessao nao iniciada ainda</h2>";
+    echo "<section class=page-in-information-state>";
+    echo "<h1>You are not logged in</h1>";
+    echo "<p>login <a href=login.php>here</a></p>";
+    echo "</section>";
   }
   ?>
 </section>

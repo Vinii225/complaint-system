@@ -19,7 +19,7 @@ if (!defined('ALLOW_INCLUDE')) {
         $authorName = $conn->query($sql)->fetch_assoc()['name'];
         echo "
           <li class='listed-post'>
-            <a href='$row[id]'>
+            <a href='post.php?id=$row[id]'>
             <h1 class='title'>" . $row['title'] . "</h1>
             <p class='author'><strong>Autor:</strong> " . $authorName . "</p>
             <p class='created-date'><strong><em>Postado em: " . $row['created_at'] . "</em></strong></p>

@@ -30,7 +30,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <section class="register-page">
   <?php
-  include './includes/auth_register_form.php';
+  include './includes/auth.php';
+  if (!$isLoggedIn) {
+    include './includes/auth_register_form.php';
+  } else {
+    echo "<section class=page-in-information-state>";
+    echo "<h1>You are already logged in</h1>";
+    echo "</section>";
+  }
   ?>
 </section>
 
