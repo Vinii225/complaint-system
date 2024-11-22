@@ -6,12 +6,11 @@ include './includes/header.php';
 
 <?php
 include 'db.php';
-session_start();
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   $name = $_POST['name'];
   $email = $_POST['email'];
-  $password = password_hash($_POST['password'], PASSWORD_DEFAULT); // Hash the password
+  $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
   $sql = "INSERT INTO users (name, email, password) VALUES ('$name', '$email', '$password')";
 
@@ -19,6 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $sql = "SELECT * FROM users WHERE email='$email'";
     $result = $conn->query($sql);
     $user = $result->fetch_assoc();
+    $_SESSION['logged_in'] = true;
     $_SESSION['user_id'] = $user['id'];
     $_SESSION['user_name'] = $user['name'];
     echo "Registration successful!";

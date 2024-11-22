@@ -2,6 +2,10 @@
 if (!defined('ALLOW_INCLUDE')) {
   die('Direct access not allowed!');
 }
+
+session_start();
+
+include './includes/auth.php';
 ?>
 
 <!DOCTYPE html>
@@ -60,16 +64,15 @@ if (!defined('ALLOW_INCLUDE')) {
       </ul>
       <ul class="auth-links">
         <?php
-        // $session_status = session_status();
-        // if ($session_status) {
-        foreach ($loggedAuthLinks as $title => $link) {
-          echo "<a href='$link'><li>$title</a></a>";
+        if ($isLoggedIn) {
+          foreach ($loggedAuthLinks as $title => $link) {
+            echo "<a href='$link'><li>$title</a></a>";
+          }
+        } else {
+          foreach ($unloggedAuthLinks as $title => $link) {
+            echo "<a href='$link'><li>$title</a></a>";
+          }
         }
-        // } else {
-        foreach ($unloggedAuthLinks as $title => $link) {
-          echo "<a href='$link'><li>$title</a></a>";
-        }
-        // }
         ?>
       </ul>
     </nav>

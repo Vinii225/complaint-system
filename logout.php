@@ -7,11 +7,11 @@ include './includes/header.php';
 <section class="logout-page">
   <h1>Logging out</h1>
   <?php
-  $sessionDestroyed = session_destroy();
-  if ($sessionDestroyed) {
-    echo "<h2>Session Destroyed Successfully</h2>";
+  if (isset($_SESSION['user_id']) && isset($_SESSION['user_name'])) {
+    session_destroy();
+    echo "<h2>Sessao destruida com sucesso</h2>";
   } else {
-    echo "<h2>Failed to Destroy Session</h2>";
+    echo "<h2>Sessao nao iniciada ainda</h2>";
   }
   ?>
 </section>

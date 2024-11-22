@@ -6,24 +6,24 @@ if (!defined('ALLOW_INCLUDE')) {
 ?>
 <?php
 // Iniciar a sessão e incluir o arquivo de conexão com o banco
+include './db.php';
 
 // Verificar se o formulário foi enviado
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   // Sanitizar e pegar os dados do formulário
   $title = htmlspecialchars(trim($_POST['title']));
   $body = htmlspecialchars(trim($_POST['body']));
+  $author = $_SESSION['user_id'];
 
   // Verificar se os campos não estão vazios
   if (!empty($title) && !empty($body)) {
     // Preparar a query para inserir o post no banco de dados
-    $sql = "INSERT INTO posts (title, content) VALUES ('$title', '$content')";
+    $sql = "INSERT INTO posts (author, title, body) VALUES ('$author', '$title', '$body')";
 
     if ($conn->query($sql) === TRUE) {
       $last_inserted_id = $conn->insert_id; // Função para obter o ID do último registro inserido
 
       // Redirecionar para a página do post, passando o ID via URL
-      header("Location: view_post.php?id=$last_inserted_id");
-      exit; // Garantir que o código posterior não seja executado
     } else {
       echo "Erro ao criar post: " . $conn->error;
     }

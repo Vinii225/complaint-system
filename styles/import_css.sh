@@ -4,3 +4,4 @@ cat footer.css >> styles.php
 cat posts.css >> styles.php
 cat forms.css >> styles.php
 cat about.css >> styles.php
+cat logout.css >> styles.php

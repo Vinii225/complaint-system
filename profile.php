@@ -4,19 +4,39 @@ define('ALLOW_INCLUDE', true);
 include './includes/header.php';
 ?>
 
-<section class="about-page">
-  <h1>Sobre Nos</h1>
-  <div class="info">
-    <p>
-      SOMOS UMA EMPRESA BASEADA NA <span class="accent">CONFIANCA</span> DO CLIENTE E SEUS PRODUTOS DE CONSUMO
-      <br>
-      <br>
-      NOS BUSCAMOS AJUDAR AS PESSOAS A ENCONTRAREM UMA <span class="accent">SOLUCAO</span> PARA SEUS PROBLEMAS
-      <br>
-      <br>
-      E INCENTIVAR AS <span class="accent">EMPRESAS</span> A SEREM MAIS <span class="accent">TRANSPARENTES</span> PARA COM SEUS USUARIOS
-    </p>
-    <img src="" alt="">
+<section class="profile-page">
+  <h1>Seu Perfil</h1>
+  <div class="user-info">
+    <p class="user-name">Ola <strong><?php echo $_SESSION['user_name'] ?></strong></p>
+  </div>
+  <h2>Suas Postagens</h2>
+  <div class="posts">
+    <section class=posts-container>
+      <?php
+      $sql = "SELECT * FROM posts WHERE author = $_SESSION[user_id] ORDER BY created_at DESC";
+      include 'db.php';
+      $result = $conn->query($sql);
+
+      if ($result->num_rows > 0) {
+        echo "<ul>";
+        while ($row = $result->fetch_assoc()) {
+          $sql = "SELECT * FROM users WHERE id = $row[author]";
+          $authorName = $conn->query($sql)->fetch_assoc()['name'];
+          echo "
+          <li class='listed-post'>
+            <a href='$row[id]'>
+            <h1 class='title'>" . $row['title'] . "</h1>
+            <p class='author'><strong>Autor:</strong> " . $authorName . "</p>
+            <p class='created-date'><strong><em>Postado em: " . $row['created_at'] . "</em></strong></p>
+            </a>
+          </li>";
+        }
+        echo "</ul>";
+      } else {
+        echo "<h1>Nenhum Post Encontrado.</h1>";
+      }
+      ?>
+    </section>
   </div>
 </section>
 
