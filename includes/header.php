@@ -16,12 +16,21 @@ if (!defined('ALLOW_INCLUDE')) {
     echo isset($pageTitle) ? " - $pageTitle" : "";
     ?>
   </title>
+  <!--
+  Erro ao usar no XAMPP
   <link rel="stylesheet" href="styles/index.css">
   <link rel="stylesheet" href="styles/navbar.css">
   <link rel="stylesheet" href="styles/footer.css">
   <link rel="stylesheet" href="styles/forms.css">
   <link rel="stylesheet" href="styles/posts.css">
   <link rel="stylesheet" href="styles/about.css">
+  -->
+  <style>
+    <?php
+    include "../styles/styles.php";
+    echo isset($styles_import) ? $styles_import : "* {margin: 0;}";
+    ?>
+  </style>
 </head>
 
 <body>

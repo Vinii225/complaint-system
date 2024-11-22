@@ -1,7 +1,7 @@
 <?php
 $pageTitle = "Logout";
 define('ALLOW_INCLUDE', true);
-include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
+include '../includes/header.php';
 ?>
 
 
@@ -18,5 +18,5 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
 </section>
 
 <?php
-include $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php';
+include '../includes/footer.php';
 ?>

@@ -1,7 +1,7 @@
 <?php
 $pageTitle = "Register";
 define('ALLOW_INCLUDE', true);
-include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
+include '../includes/header.php';
 ?>
 
 <?php
@@ -30,10 +30,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <section class="register-page">
   <?php
-  include $_SERVER['DOCUMENT_ROOT'] . '/includes/auth_register_form.php';
+  include '../includes/auth_register_form.php';
   ?>
 </section>
 
 <?php
-include $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php';
+include '../includes/footer.php';
 ?>

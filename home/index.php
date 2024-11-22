@@ -1,16 +1,16 @@
 <?php
 $pageTitle = "Home";
 define('ALLOW_INCLUDE', true);
-include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
+include '../includes/header.php';
 ?>
 
 <section class="home">
   <?php
   if (isset($_GET['id'])) {
     $post_id = (int)$_GET['id'];
-    include $_SERVER['DOCUMENT_ROOT'] . '/includes/post_read.php';
+    include '../includes/post_read.php';
   } else {
-    include $_SERVER['DOCUMENT_ROOT'] . '/includes/post_create.php';
+    include '../includes/post_create.php';
   }
   ?>
 
@@ -31,5 +31,5 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
 </section>
 
 <?php
-include $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php';
+include '../includes/footer.php';
 ?>

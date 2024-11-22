@@ -1,7 +1,7 @@
 <?php
 $pageTitle = "Login";
 define('ALLOW_INCLUDE', true);
-include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
+include '../includes/header.php';
 ?>
 
 <?php
@@ -32,10 +32,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <section class="login-page">
   <?php
-  include $_SERVER['DOCUMENT_ROOT'] . '/includes/auth_login_form.php';
+  include '../includes/auth_login_form.php';
   ?>
 </section>
 
 <?php
-include $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php';
+include '../includes/footer.php';
 ?>

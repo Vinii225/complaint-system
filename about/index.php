@@ -1,7 +1,7 @@
 <?php
 $pageTitle = "Register";
 define('ALLOW_INCLUDE', true);
-include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
+include '../includes/header.php';
 ?>
 
 <section class="about-page">
@@ -21,5 +21,5 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
 </section>
 
 <?php
-include $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php';
+include '../includes/footer.php';
 ?>
