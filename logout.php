@@ -1,9 +1,8 @@
 <?php
 $pageTitle = "Logout";
 define('ALLOW_INCLUDE', true);
-include '../includes/header.php';
+include './includes/header.php';
 ?>
-
 
 <section class="logout-page">
   <h1>Logging out</h1>
@@ -18,5 +17,5 @@ include '../includes/header.php';
 </section>
 
 <?php
-include '../includes/footer.php';
+include './includes/footer.php';
 ?>

@@ -3,7 +3,8 @@ if (!defined('ALLOW_INCLUDE')) {
   die('Direct access not allowed!');
 }
 
-if (isset($postId)) {
+if (isset($_GET["id"])) {
+  $post_id = $_GET["id"];
   // Preparar a consulta para pegar os dados do post
   $sql = "SELECT * FROM posts WHERE id = $post_id";
   $result = $conn->query($sql);
@@ -27,4 +28,4 @@ if (isset($postId)) {
 
 <!-- Link para voltar à lista de posts -->
 <button>Editar Post</button>
-<p><a href="/">Voltar à lista de posts</a></p>
+<p><a href="home.php">Voltar à lista de posts</a></p>

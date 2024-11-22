@@ -4,9 +4,8 @@ if (!defined('ALLOW_INCLUDE')) {
 }
 
 $footerLinks = [
-  "Home" => "/",
-  "Forum" => "/forum",
-  "About" => "/about",
+  "Home" => "home.php",
+  "About" => "about.php",
 ];
 $socialMediaLinks = [
   "Jezreel" => "https://github.com/woragis",

@@ -27,7 +27,7 @@ if (!defined('ALLOW_INCLUDE')) {
   -->
   <style>
     <?php
-    include "../styles/styles.php";
+    include "./styles/styles.php";
     echo isset($styles_import) ? $styles_import : "* {margin: 0;}";
     ?>
   </style>
@@ -36,20 +36,20 @@ if (!defined('ALLOW_INCLUDE')) {
 <body>
   <?php
   $links = [
-    "Home" => "/",
-    "About" => "/about",
+    "Home" => "home.php",
+    "About" => "about.php",
   ];
   $unloggedAuthLinks = [
-    "Login" => "/login",
-    "Register" => "/register",
+    "Login" => "login.php",
+    "Register" => "register.php",
   ];
   $loggedAuthLinks = [
-    "Profile" => "/profile",
-    "Logout" => "/logout",
+    "Profile" => "profile.php",
+    "Logout" => "logout.php",
   ];
   ?>
   <header class="navbar-container">
-    <img src="oi" alt="Ouvidoria Logo">
+    <img src="" alt="Ouvidoria Logo">
     <nav class="navbar">
       <ul class="nav-links">
         <?php
