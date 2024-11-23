@@ -3,9 +3,6 @@ if (!defined('ALLOW_INCLUDE')) {
   die('Direct access not allowed!');
 }
 
-?>
-<?php
-// Iniciar a sessão e incluir o arquivo de conexão com o banco
 include './db.php';
 
 // Verificar se o formulário foi enviado
@@ -15,8 +12,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   $body = htmlspecialchars(trim($_POST['body']));
   $author = $_SESSION['user_id'];
 
-  // Verificar se os campos não estão vazios
-  if (!empty($title) && !empty($body)) {
+  if (!$isLoggedIn) {
+    echo "<span class=unlogged-warn>Faca Login Antes de Criar uma Votacao</span>";
+  } else if (!empty($title) && !empty($body)) {
     // Preparar a query para inserir o post no banco de dados
     $sql = "INSERT INTO posts (author, title, body) VALUES ('$author', '$title', '$body')";
 
@@ -36,8 +34,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   <img src="hero-image.jpg" alt="Foto de Trabalhadores">
   <form method="POST" class="form" id="post-form">
     <h1>Criar Post</h1>
-    <input type="text" id="title" name="title" placeholder="Titulo" required />
-    <textarea id="body" name="body" placeholder="Mensagem" rows="5" required></textarea>
-    <button type="submit">Enviar Post</button>
+    <?php
+    if (!$isLoggedIn) {
+      echo "<span class=unlogged-warn>Faca Login Antes de Criar uma Votacao</span>";
+    }
+    ?>
+    <input type="text" id="title" name="title" placeholder="Titulo" required
+      <?php echo $isLoggedIn ? "" : $disabledString; ?> />
+    <textarea id="body" name="body" placeholder="Mensagem" rows="5" required
+      <?php echo $isLoggedIn ? "" : $disabledString; ?>>
+  </textarea>
+    <button type="submit"
+      <?php echo $isLoggedIn ? "" : $disabledString; ?>>
+      Enviar Post</button>
   </form>
 </section>

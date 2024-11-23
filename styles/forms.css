@@ -65,6 +65,10 @@
     font-size: 12px;
   }
 
+  a {
+    text-decoration: underline;
+  }
+
   .form-helper-buttons {
     margin: -10px 0 20px;
     width: 100%;
@@ -98,7 +102,7 @@
 
 .hero-section {
   position: relative;
-  height: 400px;
+  height: 500px;
   overflow: hidden;
 
   img {
@@ -112,4 +116,10 @@
   position: absolute;
   top: 0;
   right: 50px;
+}
+
+.unlogged-warn {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: rgb(204, 68, 68);
 }

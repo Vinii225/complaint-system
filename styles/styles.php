@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+:root {
+  --primary-color: greenyellow;
+  --primary-color-light: rgb(219, 255, 164);
+  --primary-color-dark: rgb(63, 95, 15);
+}
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +16,6 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
   background-color: #f4f4f4;
   min-height: calc(100vh - 260px);
 }
@@ -38,7 +42,7 @@ h1 {
   align-items: center;
   flex-direction: row;
   height: 60px;
-  background-color: #fff;
+  background-color: var(--primary-color-light);
   padding: 0 30px;
 }
 
@@ -53,7 +57,7 @@ h1 {
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    gap: 20px;
+    gap: 40px;
   }
 
   a {
@@ -70,7 +74,7 @@ h1 {
   gap: 50px;
   padding: 30px 50px;
   height: 200px;
-  background-color: #333;
+  background-color: var(--primary-color-dark);
   color: #fff;
 
   a {
@@ -254,6 +258,10 @@ h1 {
     font-size: 12px;
   }
 
+  a {
+    text-decoration: underline;
+  }
+
   .form-helper-buttons {
     margin: -10px 0 20px;
     width: 100%;
@@ -287,7 +295,7 @@ h1 {
 
 .hero-section {
   position: relative;
-  height: 400px;
+  height: 500px;
   overflow: hidden;
 
   img {
@@ -301,6 +309,12 @@ h1 {
   position: absolute;
   top: 0;
   right: 50px;
+}
+
+.unlogged-warn {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: rgb(204, 68, 68);
 }
 .about-page {
   background-color: #555;
