@@ -315,14 +315,19 @@ h1 {
   font-size: 1.2em;
   font-weight: bold;
   color: rgb(204, 68, 68);
+  a {
+    color: rgb(204, 68, 68);
+  }
 }
 .about-page {
-  background-color: #555;
+  background-color: #f0f0f0;
   padding: 50px;
   margin: 50px 200px;
 
   h1 {
-    color: #eee;
+    color: var(--primary-color-dark);
+    text-align: center;
+    font-size: 36px;
   }
 
   .info {
@@ -355,6 +360,7 @@ h1 {
   .accent {
     color: greenyellow;
     font-weight: bold;
+    text-shadow: 0px 0px 10px black;
   }
 }
 .logout-page {
