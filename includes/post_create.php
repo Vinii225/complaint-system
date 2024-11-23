@@ -32,9 +32,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   }
 }
 ?>
-<form method="POST" class="form post-form">
-  <h1>Criar Post</h1>
-  <input type="text" id="title" name="title" placeholder="Titulo" required />
-  <textarea id="body" name="body" placeholder="Mensagem" rows="5" required></textarea>
-  <button type="submit">Enviar Post</button>
-</form>
+<section class="hero-section">
+  <img src="hero-image.jpg" alt="Foto de Trabalhadores">
+  <form method="POST" class="form" id="post-form">
+    <h1>Criar Post</h1>
+    <input type="text" id="title" name="title" placeholder="Titulo" required />
+    <textarea id="body" name="body" placeholder="Mensagem" rows="5" required></textarea>
+    <button type="submit">Enviar Post</button>
+  </form>
+</section>

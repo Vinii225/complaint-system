@@ -175,6 +175,18 @@ h1 {
     font-size: 10px;
   }
 }
+.post-page {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+
+  .title {
+    margin: 50px auto 10px;
+  }
+}
 .form {
   margin: 40px auto;
   padding: 20px 40px;
@@ -271,6 +283,24 @@ h1 {
   65% {
     transform: translateX(0px);
   }
+}
+
+.hero-section {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    position: absolute;
+  }
+}
+
+#post-form {
+  position: absolute;
+  top: 0;
+  right: 50px;
 }
 .about-page {
   background-color: #555;

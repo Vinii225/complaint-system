@@ -95,3 +95,21 @@
     transform: translateX(0px);
   }
 }
+
+.hero-section {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    position: absolute;
+  }
+}
+
+#post-form {
+  position: absolute;
+  top: 0;
+  right: 50px;
+}
