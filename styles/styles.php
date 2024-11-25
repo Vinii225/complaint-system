@@ -379,3 +379,9 @@ h1 {
   flex-direction: column;
   gap: 20px;
 }
+button.like-button {
+  padding: 5px 10px;
+  min-width: 100px;
+  min-height: 40px;
+  margin-top: 10px;
+}

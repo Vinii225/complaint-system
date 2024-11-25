@@ -7,3 +7,4 @@ cat forms.css >> styles.php
 cat about.css >> styles.php
 cat logout.css >> styles.php
 cat profile.css >> styles.php
+cat like.css >> styles.php
