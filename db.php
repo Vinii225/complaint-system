@@ -27,9 +27,18 @@ $sql_posts = "CREATE TABLE IF NOT EXISTS posts (
     author INT NOT NULL,
     title VARCHAR(255) NOT NULL,
     body TEXT NOT NULL,
+    likes INT DEFAULT 0,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     FOREIGN KEY (author) REFERENCES users(id) ON DELETE CASCADE
+);";
+
+$sql_likes = "CREATE TABLE IF NOT EXISTS likes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    post_id INT NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    FOREIGN KEY (post_id) REFERENCES posts(id) ON DELETE CASCADE
 );";
 
 if ($conn->query($sql_users) !== TRUE) {
@@ -38,4 +47,8 @@ if ($conn->query($sql_users) !== TRUE) {
 
 if ($conn->query($sql_posts) !== TRUE) {
   echo "Error creating posts table: " . $conn->error;
+}
+
+if ($conn->query($sql_likes) !== TRUE) {
+  echo "Error creating likes table: " . $conn->error;
 }

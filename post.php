@@ -20,13 +20,12 @@ include './includes/header.php';
         $authorName = $conn->query($sql)->fetch_assoc()['name'];
         echo "
           <li class='listed-post'>
-            <a href='post.php?id=$row[id]'>
             <h1 class='title'>" . $row['title'] . "</h1>
             <p class='author'><strong>Autor:</strong> " . $authorName . "</p>
             <p class='created-date'><strong><em>Postado em: " . $row['created_at'] . "</em></strong></p>
             <p class='created-date'><strong><em>Ultima vez atualizado em: " . $row['updated_at'] . "</em></strong></p>
+            <button class=like-button onclick=like($row[id],$row[author])>Likes: " . $row['likes'] . "</button>
             <p>" . $row['body'] . "</p>
-            </a>
           </li>";
       }
       echo "</ul>";

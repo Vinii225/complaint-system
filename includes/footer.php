@@ -39,6 +39,10 @@ $socialMediaLinks = [
   </section>
 </footer>
 
+<?php
+include "./scripts/scripts.php";
+?>
+
 </body>
 
 </html>

@@ -24,6 +24,7 @@ if (!defined('ALLOW_INCLUDE')) {
             <p class='author'><strong>Autor:</strong> " . $authorName . "</p>
             <p class='created-date'><strong><em>Postado em: " . $row['created_at'] . "</em></strong></p>
             </a>
+            <button class=like-button onclick=like($row[id],$row[author])>Likes: " . $row['likes'] . "</button>
           </li>";
       }
       echo "</ul>";
