@@ -10,10 +10,9 @@ if (!defined('ALLOW_INCLUDE')) {
   <input type="password" name="password" placeholder="Password" required autocomplete="off">
   <button type="submit">Login</button>
   <div class="form-helper-buttons">
-    <p><a href="/forgot-password">Esqueceu a senha?</a></p>
     <p class="authentication-toggler">
       Don't have an account?
-      <a href="/register">Register Here</a>
+      <a href="register.php">Register Here</a>
     </p>
   </div>
 </form>
