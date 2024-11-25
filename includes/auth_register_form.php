@@ -13,7 +13,7 @@ if (!defined('ALLOW_INCLUDE')) {
   <div class="form-helper-buttons">
     <p class="authentication-toggler">
       Already have an account?
-      <a href="/login">Login Here</a>
+      <a href="login.php">Login Here</a>
     </p>
   </div>
 </form>
